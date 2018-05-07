@@ -19,8 +19,16 @@
 				</ul>
 
 				<div class="ui large action input">
-					<input id="input-id" type="text" value="" />
-					<button id="button-id" class="ui large button">OK</button>
+					<input [disabled]="isExerciseEnded"
+					       [(ngModel)]="userInput"
+					       type="text" />
+
+					<button [disabled]="userInput.toLowerCase() !== correctAnswer || isExerciseEnded"
+					        [ngStyle]="{ backgroundColor: userInput === correctAnswer ? 'green' : userInput }"
+					        (click)="endTheExercise()"
+					        class="ui large button">
+						OK
+					</button>
 				</div>
 			</div>
 			<div class="center aligned middle aligned column">
