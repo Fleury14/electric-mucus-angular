@@ -6,6 +6,7 @@ import { Component } from "@angular/core";
 	styleUrls   : ["./app.component.css"]
 })
 export class AppComponent {
+	public userInput = "";
 	public correctAnswer = "electric mucus";
 
 	public isExerciseEnded = false;
