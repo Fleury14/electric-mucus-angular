@@ -7,12 +7,13 @@ import { Component } from "@angular/core";
 })
 export class AppComponent {
 	public readonly correctAnswer = "electric mucus";
-	public userInput = "";
+	public userInput = "Hello";
 
 	public isExerciseEnded = false;
 
 	public endTheExercise() {
 		this.isExerciseEnded = true;
+		this.userInput = 'YOU WIN OMG!';
 		alert("Done!");
 	}
 }
